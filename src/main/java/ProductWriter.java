@@ -20,9 +20,6 @@ public class ProductWriter {
             iD=inPt.getNonZeroLenString(pipe, "ID of Product");
             name=inPt.getNonZeroLenString(pipe, "Name of Product");
             desCrip=inPt.getNonZeroLenString(pipe, "Description of Product");
-
-
-
             cost=inPt.getDouble(pipe, "Cost of Product");
             products.add(new Product(iD,name,desCrip,cost));
             done = inPt.getYNConfirm(pipe, "Are you done with input");
@@ -40,10 +37,6 @@ public class ProductWriter {
                 for(int x=0; x < listLength; x++){
 
                     pWriter.println(products.get(x).toCSVDataRecord());
-
-
-
-
                 }
             } catch (IOException e) {
                 System.out.println("An error occurred.");
